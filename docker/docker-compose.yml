@@ -1,0 +1,17 @@
+#version: '2'
+
+#networks:
+ # app-tier:
+  #  driver: bridge
+
+#services:
+ # bootcache:
+  #  image: springboot-caching/gs-caching
+   # ports:
+    #  - "80:9066"
+    #networks:
+     # - app-tier
+bootcache:
+  image: springboot-caching/gs-caching
+  ports:
+    - "80:9066"
